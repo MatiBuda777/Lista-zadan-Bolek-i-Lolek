@@ -1416,24 +1416,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Mateusz\\.nuget\\packages\\": {}
+    "/home/mateuszbudek/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Mateusz\\RiderProjects\\Lista-zadan-Bolek-i-Lolek\\ListaZadanBolkaILolka.csproj",
+      "projectUniqueName": "/home/mateuszbudek/RiderProjects/ListaZadanBolkaILolka/ListaZadanBolkaILolka.csproj",
       "projectName": "ListaZadanBolkaILolka",
-      "projectPath": "C:\\Users\\Mateusz\\RiderProjects\\Lista-zadan-Bolek-i-Lolek\\ListaZadanBolkaILolka.csproj",
-      "packagesPath": "C:\\Users\\Mateusz\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Mateusz\\RiderProjects\\Lista-zadan-Bolek-i-Lolek\\obj\\",
+      "projectPath": "/home/mateuszbudek/RiderProjects/ListaZadanBolkaILolka/ListaZadanBolkaILolka.csproj",
+      "packagesPath": "/home/mateuszbudek/.nuget/packages/",
+      "outputPath": "/home/mateuszbudek/RiderProjects/ListaZadanBolkaILolka/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Mateusz\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/home/mateuszbudek/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
       ],
       "sources": {
+        "/usr/lib/dotnet/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -1452,7 +1453,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.300"
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
       "net9.0": {
@@ -1495,7 +1496,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/9.0.110/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

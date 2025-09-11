@@ -7,7 +7,7 @@
         Title="ListaZadanBolkaILolka"
         Height="1000" Width="700">
         
-        <StackPanel Background="Azure" Orientation="Vertical">
+        <StackPanel Background="#784500" Orientation="Vertical">
         
                 <TextBlock Background="#FFA600" Padding="15" TextAlignment="Center" FontSize="40" Text="Utwórz zadanie!"/>
         
@@ -62,9 +62,9 @@
                                 </WrapPanel>
                                 
                                 <WrapPanel Grid.Column="1" Grid.Row="0" Grid.RowSpan="3" Background="#FFBD4D" Margin="10" Orientation="Vertical">
-                                           <TextBlock Text="(Imię postaci)"/>
+                                           <TextBlock x:Name="CharacterShowTextBlock" FontSize="30" TextAlignment="Center" Text="(Imię postaci)"/>
                                            <Border Margin="20" Padding="5" BorderBrush="Orange" BorderThickness="10 15">
-                                                   <Image x:Name="CharacterShowImage"/>
+                                                   <Image x:Name="CharacterShowImage" Width="300"/>
                                            </Border>
                                        <Button Click="AddTaskButton_OnClick" Content="Dodaj zadanie"/>
                                 </WrapPanel>
@@ -73,7 +73,7 @@
                         <!-- TaskList -->
                         <StackPanel>
                                 <Button Click="DeleteTasksButton_OnClick" Content="Usuń zaznaczone"/>
-                                <ListBox x:Name="TaskListBox" Margin="20" HorizontalAlignment="Center"/>
+                                <ListBox x:Name="TaskListBox" SelectionMode="Multiple" Margin="20" HorizontalAlignment="Center"/>
                         </StackPanel>
                         
                         

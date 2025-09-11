@@ -21,6 +21,13 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Assets\" />
+      <Folder Include="Images\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Images\Bolek.jpg" />
+      <AvaloniaResource Include="Images\Bolek.jpg" />
+      <None Remove="Images\Lolek.jpg" />
+      <AvaloniaResource Include="Images\Lolek.jpg" />
     </ItemGroup>
 </Project>
