@@ -4,80 +4,93 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="ListaZadanBolkaILolka.MainWindow"
-        Title="ListaZadanBolkaILolka"
+        Title="Lista Zadań Bolka i Lolka"
         Height="1000" Width="700">
         
-        <StackPanel Background="#784500" Orientation="Vertical">
-        
-                <TextBlock Background="#FFA600" Padding="15" TextAlignment="Center" FontSize="40" Text="Utwórz zadanie!"/>
-        
-                <StackPanel Orientation="Horizontal">
-                        <Grid Background="#FFBD4D" Margin="20" HorizontalAlignment="Center">
-                                <Grid.RowDefinitions>
-                                        <RowDefinition Height="Auto"/>
-                                        <RowDefinition Height="Auto"/>
-                                        <RowDefinition Height="Auto"/>
-                                        <RowDefinition Height="Auto"/>
-                                </Grid.RowDefinitions>
-                    
-                                <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="Auto"/>
-                                        <ColumnDefinition Width="Auto"/>
-                                </Grid.ColumnDefinitions>
-                    
-                                <!--Row 1-->
-                                <WrapPanel Grid.Column="0" Grid.Row="0" Margin="10" Orientation="Vertical">
-                                        <TextBlock Margin="10" Padding="15" TextAlignment="Center"
-                                                   FontSize="20" Text="Podaj nazwę zadania:"/>
-                                        <TextBox x:Name="TaskNameTextBox" Margin="10" MinWidth="120" Watermark="Wpisz nazwę zadania"/>
+        <ScrollViewer>
+                <StackPanel Background="#784500" Orientation="Vertical">
+                
+                        <TextBlock Background="#FFA600" Padding="15" TextAlignment="Center" FontSize="40" Text="Utwórz zadanie!"/>
+                
+                        <StackPanel Orientation="Horizontal">
+                                <Grid Background="#FFBD4D" Margin="20" HorizontalAlignment="Center">
+                                        <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
                             
-                                </WrapPanel>
+                                        <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                        </Grid.ColumnDefinitions>
+                            
+                                        <!--Row 1-->
+                                        <WrapPanel Grid.Column="0" Grid.Row="0" Margin="10" Orientation="Vertical">
+                                                <TextBlock Margin="10" Padding="15" TextAlignment="Center"
+                                                           FontSize="20" Text="Podaj nazwę zadania:"/>
+                                                <TextBox x:Name="TaskNameTextBox" Margin="10" MinWidth="120" Watermark="Wpisz nazwę zadania"/>
+                                    
+                                        </WrapPanel>
+                                        
+                                        <!--Row 2-->
+                                        <WrapPanel Grid.Column="0" Grid.Row="1" Margin="10" Orientation="Vertical">
+                                                <TextBlock Margin="10" Padding="15" TextAlignment="Center"
+                                                           FontSize="20" Text="Kto ma wykonać zadanie:"/>
+                                                <ComboBox x:Name="CharacterSelectComboBox" SelectionChanged="CharacterSelectComboBox_OnSelectionChanged" Margin="10">
+                                                        <ComboBoxItem Content="Bolek"/>
+                                                        <ComboBoxItem Content="Lolek"/>
+                                                </ComboBox>
+                                        </WrapPanel>
+                                        
+                                        <!--Row 3-->
+                                        <WrapPanel Grid.Column="0" Grid.Row="2" Margin="10" Orientation="Vertical">
+                                                <TextBlock Margin="10" Padding="15" TextAlignment="Center"
+                                                           FontSize="20" Text="Priorytet zadania:"/>
+                                                <RadioButton x:Name="LowPriorityRadioButton" Content="niski"/>
+                                                <RadioButton x:Name="MidPriorityRadioButton" Content="Normalny"/>
+                                                <RadioButton x:Name="HighPriorityRadioButton" Content="WYSOKI"/>
+                                        </WrapPanel>
+                                        
+                                        <!--Row 4-->
+                                        <WrapPanel Grid.Column="0" Grid.Row="3" Margin="10" Orientation="Vertical">
+                                                <TextBlock Margin="10" Padding="15" TextAlignment="Center"
+                                                           FontSize="20" Text="Dodatkowe informacje:"/>
+                                                <CheckBox x:Name="OutdoorsTask" Content="zadanie na dworze"/>
+                                                <CheckBox x:Name="RequiredToolsTask" Content="zadanie wymagające sprzętu"/>
+                                                <CheckBox x:Name="TeamTask" Content="zadanie drużynowe"/>
+                                        </WrapPanel>
+                                        
+                                        <!--Row 5-->
+                                        <WrapPanel Grid.Column="0" Grid.Row="4" Margin="10" Orientation="Vertical">
+                                                <TextBlock Margin="10" Padding="15" TextAlignment="Center"
+                                                           FontSize="20" Text="Wybierz datę wykonania zadania:"/>
+                                                <TextBlock x:Name="DateTextBlock" Text="Nie wybrano daty zadania" TextAlignment="Center"/>
+                                                <CalendarDatePicker x:Name="TaskCalendar" SelectedDateChanged="TaskCalendar_OnSelectedDateChanged"
+                                                                    Margin="10" Padding="20" Width="250" Background="Coral" />
+                                        </WrapPanel>
+                                        
+                                        <WrapPanel Grid.Column="1" Grid.Row="0" Grid.RowSpan="3" Background="#FFBD4D" Margin="10" Orientation="Vertical">
+                                                   <TextBlock x:Name="CharacterShowTextBlock" Margin="10" Padding="15" FontSize="30" TextAlignment="Center" Text="(Imię postaci)"/>
+                                                   <Border Margin="20" Padding="2" BorderBrush="#784500" BorderThickness="5">
+                                                           <Image x:Name="CharacterShowImage" Width="300"/>
+                                                   </Border>
+                                               <Button Click="AddTaskButton_OnClick" Content="Dodaj zadanie"/>
+                                        </WrapPanel>
+                                </Grid>
                                 
-                                <!--Row 2-->
-                                <WrapPanel Grid.Column="0" Grid.Row="1" Margin="10" Orientation="Vertical">
-                                        <TextBlock Margin="10" Padding="15" TextAlignment="Center"
-                                                   FontSize="20" Text="Kto ma wykonać zadanie:"/>
-                                        <ComboBox x:Name="CharacterSelectComboBox" SelectionChanged="CharacterSelectComboBox_OnSelectionChanged" Margin="10">
-                                                <ComboBoxItem Content="Bolek"/>
-                                                <ComboBoxItem Content="Lolek"/>
-                                        </ComboBox>
-                                </WrapPanel>
+                                <!-- TaskList -->
+                                <StackPanel>
+                                        <Button Click="DeleteTasksButton_OnClick" Margin="20" Background="DarkRed" Foreground="White" Content="Usuń zaznaczone"/>
+                                        <Button Click="ShowTodayTasksButton_OnClick" Margin="20" Background="LightGray" Foreground="White" Content="Wyświetl zadania na dziś"/>
+                                        <ListBox x:Name="TaskListBox" SelectionMode="Multiple" Margin="20 2" Background="DarkGray" Foreground="Black" HorizontalAlignment="Center"/>
+                                </StackPanel>
                                 
-                                <!--Row 3-->
-                                <WrapPanel Grid.Column="0" Grid.Row="2" Margin="10" Orientation="Vertical">
-                                        <TextBlock Margin="10" Padding="15" TextAlignment="Center"
-                                                   FontSize="20" Text="Priorytet zadania:"/>
-                                        <RadioButton x:Name="LowPriorityRadioButton" Content="niski"/>
-                                        <RadioButton x:Name="MidPriorityRadioButton" Content="Normalny"/>
-                                        <RadioButton x:Name="HighPriorityRadioButton" Content="WYSOKI"/>
-                                </WrapPanel>
                                 
-                                <!--Row 4-->
-                                <WrapPanel Grid.Column="0" Grid.Row="3" Margin="10" Orientation="Vertical">
-                                        <TextBlock Margin="10" Padding="15" TextAlignment="Center"
-                                                   FontSize="20" Text="Dodatkowe informacje:"/>
-                                        <CheckBox x:Name="OutdoorsTask" Content="zadanie na dworze"/>
-                                        <CheckBox x:Name="RequiredToolsTask" Content="zadanie wymagające sprzętu"/>
-                                        <CheckBox x:Name="TeamTask" Content="zadanie drużynowe"/>
-                                </WrapPanel>
-                                
-                                <WrapPanel Grid.Column="1" Grid.Row="0" Grid.RowSpan="3" Background="#FFBD4D" Margin="10" Orientation="Vertical">
-                                           <TextBlock x:Name="CharacterShowTextBlock" FontSize="30" TextAlignment="Center" Text="(Imię postaci)"/>
-                                           <Border Margin="20" Padding="5" BorderBrush="Orange" BorderThickness="10 15">
-                                                   <Image x:Name="CharacterShowImage" Width="300"/>
-                                           </Border>
-                                       <Button Click="AddTaskButton_OnClick" Content="Dodaj zadanie"/>
-                                </WrapPanel>
-                        </Grid>
-                        
-                        <!-- TaskList -->
-                        <StackPanel>
-                                <Button Click="DeleteTasksButton_OnClick" Content="Usuń zaznaczone"/>
-                                <ListBox x:Name="TaskListBox" SelectionMode="Multiple" Margin="20" HorizontalAlignment="Center"/>
                         </StackPanel>
                         
-                        
                 </StackPanel>
-                
-        </StackPanel>
+        </ScrollViewer>
 </Window>

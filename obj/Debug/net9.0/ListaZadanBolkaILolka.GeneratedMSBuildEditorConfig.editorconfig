@@ -26,3 +26,6 @@ build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
 [/home/mateuszbudek/RiderProjects/ListaZadanBolkaILolka/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[/home/mateuszbudek/RiderProjects/ListaZadanBolkaILolka/SecondWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

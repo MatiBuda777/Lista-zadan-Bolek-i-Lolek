@@ -1,0 +1,19 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="ListaZadanBolkaILolka.SecondWindow"
+        Title="Zadania na dziś"
+        Width="500" Height="850"
+        CanResize="False">
+    
+    <StackPanel Background="#784500" Orientation="Vertical">
+        
+                <TextBlock x:Name="ac" Background="#FFA600" Padding="15" TextAlignment="Center" FontSize="40" Text="Dzisiejsze zadania!"/>
+        
+                <StackPanel Orientation="Horizontal">
+                        <ListBox x:Name="TodayTaskListBox" SelectionMode="Multiple" Margin="20 2" Background="DarkGray" Foreground="Black" HorizontalAlignment="Center"/>
+                </StackPanel>
+        </StackPanel>
+</Window>

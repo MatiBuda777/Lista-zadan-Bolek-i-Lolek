@@ -5,6 +5,7 @@
       <map>
         <entry key="App.axaml" value="ListaZadanBolkaILolka.csproj" />
         <entry key="MainWindow.axaml" value="ListaZadanBolkaILolka.csproj" />
+        <entry key="SecondWindow.axaml" value="ListaZadanBolkaILolka.csproj" />
       </map>
     </option>
   </component>
